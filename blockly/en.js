@@ -486,4 +486,18 @@ if (window.location.href.indexOf("lang=en")>=0 ||
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION = 'Motor Direction';
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION_TOOLTIP =  'Changes the direction of the motor(true/false)';
 
+      //Bluetooth
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED = "[BLE] When Connected"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED_TOOLTIP = "Run when connects to a BLE device"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_DISCONNECTED = "[BLE] When Disconnected"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED_TOOLTIP = "Run code when disconnects form a BLE device"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE = "[BLE] Advertise"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_TOOLTIP = "When an advertisement with Espruino's manufacturer data is detected"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND = "[BLE] Send"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TOOLTIP = "Sends data to the UART on a Bluetooth device - adds a newline"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TO_UART = "to UART on"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN = "then"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING = "[BLE] On Advertising"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING = "[BLE] On Advertising"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING = "[BLE] On Advertising"
 }

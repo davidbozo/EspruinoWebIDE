@@ -69,9 +69,9 @@ function splitCharacteristic(char) {
 Blockly.Blocks.ble_connected = {
   category: 'BLE',
   init: function() {
-    this.appendDummyInput().appendField('[BLE] When Connected');
-    this.appendStatementInput('DO').appendField('do');
-    bleStatement(this, 'Run code on BLE event');
+    this.appendDummyInput().appendField('[BLE] ' + Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED);
+    this.appendStatementInput('DO').appendField(Blockly.Msg.CONTROLS_REPEAT_INPUT_DO);
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED_TOOLTIP);
   }
 };
 Blockly.JavaScript.ble_connected = function() {
@@ -82,9 +82,9 @@ Blockly.JavaScript.ble_connected = function() {
 Blockly.Blocks.ble_disconnected = {
   category: 'BLE',
   init: function() {
-    this.appendDummyInput().appendField('[BLE] When Disconnected');
-    this.appendStatementInput('DO').appendField('do');
-    bleStatement(this, 'Run code on BLE event');
+    this.appendDummyInput().appendField(Blockly.Msg.BLUETOOTH_BLE_WHEN_DISCONNECTED);
+    this.appendStatementInput('DO').appendField(Blockly.Msg.CONTROLS_REPEAT_INPUT_DO);
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_WHEN_DISCONNECTED_TOOLTIP);
   }
 };
 Blockly.JavaScript.ble_disconnected = function() {
@@ -96,7 +96,7 @@ Blockly.Blocks.ble_advertise = {
   category: 'BLE',
   init: function() {
     this.appendValueInput('VAL')
-      .setCheck(['String','Number','Boolean']).appendField('[BLE] Advertise');;
+      .setCheck(['String','Number','Boolean']).appendField('[BLE] '+ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE);;
     bleStatement(this, "Advertise on Espruino's manufacturer data");
   }
 };
@@ -108,9 +108,9 @@ Blockly.JavaScript.ble_advertise = function() {
 Blockly.Blocks.ble_on_advertise = {
   category: 'BLE',
   init: function() {
-    this.appendDummyInput().appendField('[BLE] On Advertising');
+    this.appendDummyInput().appendField(Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING);
     this.appendStatementInput('DO').appendField('do');
-    bleStatement(this, "When an advertisement with Espruino's manufacturer data is detected");
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_TOOLTIP);
   }
 };
 Blockly.JavaScript.ble_on_advertise = function() {
@@ -122,10 +122,10 @@ Blockly.JavaScript.ble_on_advertise = function() {
 Blockly.Blocks.ble_uart_write = {
   category: 'BLE',
   init: function() {
-    this.appendValueInput('VAL').setCheck(['Number','Boolean','String']).appendField('[BLE] Send');
-    this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField('to UART on');
-    this.appendStatementInput('DO').appendField('then');
-    bleStatement(this, 'Sends data to the UART on a Bluetooth device - adds a newline');
+    this.appendValueInput('VAL').setCheck(['Number','Boolean','String']).appendField(Blockly.Msg.BLUETOOTH_BLE_ON_SEND);
+    this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField();
+    this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN);
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TOOLTIP);
   }
 };
 Blockly.JavaScript.ble_uart_write = function() {

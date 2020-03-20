@@ -495,4 +495,6 @@ if (window.location.href.indexOf("lang=hu")>=0 ||
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION = 'Motor irány';
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION_TOOLTIP =  'Megváltoztatja a motor forgási irányát (Igaz/Hamis)'; //487-es sor
 
+      //Bluetooth
+      Blockly.Msg.BLUETOOTH_WHEN_CONNECTED = "Amikor kapcsolódik"
 }

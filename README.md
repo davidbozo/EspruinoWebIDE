@@ -32,7 +32,7 @@ Installing from NPM
 If you have an up to date version of [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/), you can execute the commands:
 
 * On Linux, `sudo apt-get install build-essential libudev-dev`
-* `sudo npm install nw -g`
+* `sudo npm install nw -g` (if `EACCES: permission denied, mkdir '/usr/lib/node_modules/nw/nwjs'` use: `--unsafe-perm=true` flag)
 * `sudo npm install espruino-web-ide -g`
 * To enable BLE support: `sudo setcap cap_net_raw+eip $(eval readlink -f $(which node))`
 * `espruino-web-ide`

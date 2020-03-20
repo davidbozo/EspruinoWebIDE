@@ -51,7 +51,7 @@
       section : "General",
       name : "Graphical Editor Language",
       description : "The language to use for blocks in the graphical editor. Modifying this will restart Blockly and lose any changes.",
-      type : { "en": "English", "ru":"Russian", "de": "German" },
+      type : { "en": "English", "ru":"Russian", "de": "German", "hu": "Hungarian" },
       defaultValue : "en",
       onChange : updateBlocklyURL
     });

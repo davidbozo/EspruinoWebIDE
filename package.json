@@ -22,7 +22,7 @@
     "espruino-server": "./server.js"
   },
   "scripts": {
-    "start": "nw ."
+    "start": "nw . --remote-debugging-port=9222"
   },
   "repository": {
     "type": "git",

@@ -37,9 +37,9 @@ Blockly.Blocks.robot_motor = {
         ]);
       this.appendValueInput('VAL')
           .setCheck(['Number','Boolean'])
-          .appendField('Set')
+          .appendField(Blockly.Msg.ROBOT_SET)
           .appendField(dropdown, 'PIN')
-          .appendField('Servo Speed');
+          .appendField(Blockly.Msg.ROBOT_SERVO_SPEED);
     robotStatement(this, 'Changes the speed of the motor');
   }
 };
@@ -62,9 +62,9 @@ Blockly.Blocks.robot_led = {
         ]);
     this.appendValueInput('VAL')
          .setCheck(['Number','Boolean'])
-         .appendField('Set')
+         .appendField(Blockly.Msg.ROBOT_SET)
          .appendField(dropdown, 'PIN')
-         .appendField('LED');
+         .appendField(Blockly.Msg.ROBOT_LED);
     robotStatement(this, 'Turns the LED Light on or off');
   }
 };
@@ -85,7 +85,7 @@ Blockly.Blocks.robot_ldr = {
         ]);
     this.appendDummyInput()
          .appendField(dropdown, 'PIN')
-         .appendField('LDR');
+         .appendField(Blockly.Msg.ROBOT_LDR);
     robotInput(this, 'Get the amount of light falling on the sensor');
   }
 };

@@ -67,15 +67,15 @@ Blockly.Blocks.thingy_sound_play = {
   category: 'Thingy',
   init: function() {
     this.appendDummyInput()
-         .appendField('Play Sound')
+         .appendField(Blockly.Msg.NORDIC_THINGY_PLAY_SOUND)
          .appendField(new Blockly.FieldDropdown(THINGY_SOUNDS), 'SOUND');
     this.appendValueInput('SAMPLERATE')
          .setCheck('Number')
-         .appendField("at");
+         .appendField(Blockly.Msg.NORDIC_THINGY_AT);
     this.appendDummyInput()
-         .appendField('samples/sec');
+         .appendField(Blockly.Msg.NORDIC_THINGY_SAMPLES_SEC);
     this.appendStatementInput('DO')
-         .appendField("when finished");
+         .appendField(Blockly.Msg.NORDIC_THINGY_WHEN_FINISHED);
     robotStatement(this, 'Play a sound at a specific sample rate');
   }
 };
@@ -93,13 +93,13 @@ Blockly.Blocks.thingy_sound_record = {
   category: 'Thingy',
   init: function() {
     this.appendDummyInput()
-         .appendField('Record Sound for')
+         .appendField(Blockly.Msg.NORDIC_THINGY_RECORD_SOUND_FOR)
     this.appendValueInput('LEN')
         .setCheck('Number');
     this.appendDummyInput()
-        .appendField('milliseconds');
+        .appendField(Blockly.Msg.NORDIC_THINGY_MILLISECONDS);
     this.appendStatementInput('DO')
-        .appendField("when finished");
+        .appendField(Blockly.Msg.NORDIC_THINGY_WHEN_FINISHED);
     robotStatement(this, 'Record a sound at a 8192Hz sample rate. Max 1 second');
   }
 };
@@ -116,10 +116,10 @@ Blockly.Blocks.thingy_sensor_once = {
   category: 'Thingy',
   init: function() {
     this.appendDummyInput()
-         .appendField('For one')
+         .appendField(Blockly.Msg.NORDIC_THINGY_FOR_ONE)
          .appendField(new Blockly.FieldDropdown(THINGY_SENSORS), 'SENSOR');
     this.appendStatementInput('DO')
-        .appendField("do");
+        .appendField(Blockly.Msg.NORDIC_THINGY_DO);
     robotStatement(this, 'Read Sensor once, put value in the \'Sensor Reading\' block');
   }
 };
@@ -133,11 +133,11 @@ Blockly.Blocks.thingy_sensor_many = {
   category: 'Thingy',
   init: function() {
     this.appendDummyInput()
-         .appendField('For every')
+         .appendField(Blockly.Msg.NORDIC_THINGY_FOR_EVERY)
          .appendField(new Blockly.FieldDropdown(THINGY_SENSORS), 'SENSOR')
-         .appendField('reading');
+         .appendField(Blockly.Msg.NORDIC_THINGY_READING);
     this.appendStatementInput('DO')
-        .appendField("do");
+        .appendField(Blockly.Msg.NORDIC_THINGY_DO);
     robotStatement(this, 'Keep reading sensor, put value in the \'Sensor Reading\' block');
   }
 };
@@ -158,7 +158,7 @@ Blockly.Blocks.thingy_result = {
   category: 'Thingy',
   init: function() {
     this.appendDummyInput()
-        .appendField('Sensor Reading');
+        .appendField(Blockly.Msg.NORDIC_THINGY_SENSOR_READING);
     robotInput(this, 'The result of the sensor reading from the Thingy');
   }
 };

@@ -109,7 +109,7 @@ Blockly.Blocks.ble_on_advertise = {
   category: 'BLE',
   init: function() {
     this.appendDummyInput().appendField(Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING);
-    this.appendStatementInput('DO').appendField('do');
+    this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_DO);
     bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_TOOLTIP);
   }
 };
@@ -168,7 +168,7 @@ Blockly.Blocks.ble_dev_name = {
   category: 'BLE',
   init: function() {
     this.appendDummyInput().
-      appendField('Device Named').
+      appendField(Blockly.Msg.BLUETOOTH_BLE_DEVICE_NAMED).
       appendField(new Blockly.FieldTextInput("Puck.js ABCD"), 'NAME');
     bleInput(this, '', 'BLEDevice');
   }
@@ -186,7 +186,7 @@ Blockly.Blocks.ble_dev_prefix = {
   category: 'BLE',
   init: function() {
     this.appendDummyInput().
-      appendField('Device Starting with').
+      appendField(Blockly.Msg.BLUETOOTH_BLE_DEVICE_STARTING_WITH).
       appendField(new Blockly.FieldTextInput("Puck.js"), 'NAME');
     bleInput(this, '', 'BLEDevice');
   }
@@ -204,7 +204,7 @@ Blockly.Blocks.ble_dev_address = {
   category: 'BLE',
   init: function() {
     this.appendDummyInput().
-      appendField('Device Address').
+      appendField(Blockly.Msg.BLUETOOTH_BLE_DEVICE_ADDRESS).
       appendField(new Blockly.FieldTextInput("Puck.js"), 'ADDR');
     bleInput(this, '', 'BLEDevice');
   }
@@ -220,7 +220,7 @@ Blockly.Blocks.ble_characteristic = {
   category: 'BLE',
   init: function() {
     this.appendDummyInput()
-        .appendField('Characteristic ')
+        .appendField(Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC)
         .appendField(new Blockly.FieldTextInput("0001"), 'SERV')
         .appendField(':')
         .appendField(new Blockly.FieldTextInput("2A56"), 'CHAR');
@@ -237,7 +237,7 @@ Blockly.Blocks.ble_characteristic_dropdown = {
   category: 'BLE',
   init: function() {
     this.appendDummyInput()
-        .appendField('Characteristic ')
+        .appendField(Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC)
       .appendField(new Blockly.FieldDropdown(BLE_CHARACTERISTICS), 'CHAR')
     bleInput(this, '', 'BLECharacteristic');
   }
@@ -251,9 +251,9 @@ Blockly.Blocks.ble_setchar = {
   category: 'BLE',
   init: function() {
       this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] Set');
-      this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField('on');
-      this.appendValueInput('VAL').setCheck(['Number','Boolean','String']).appendField('to');
-      this.appendStatementInput('DO').appendField('then');
+      this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField(Blockly.Msg.BLUETOOTH_BLE_ON);
+      this.appendValueInput('VAL').setCheck(['Number','Boolean','String']).appendField(Blockly.Msg.BLUETOOTH_BLE_TO);
+      this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN);
     bleStatement(this, 'Sets a value on a BLE device');
   }
 };
@@ -285,8 +285,8 @@ Blockly.Blocks.ble_getchar = {
   category: 'BLE',
   init: function() {
     this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] Get');
-    this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField('from');
-    this.appendStatementInput('DO').appendField('then');
+    this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField(Blockly.Msg.BLUETOOTH_BLE_FROM);
+    this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN);
     bleStatement(this, 'Gets a value from a BLE device');
   }
 };
@@ -318,7 +318,7 @@ Blockly.Blocks.ble_write = {
   category: 'BLE',
   init: function() {
     this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] Set');
-    this.appendValueInput('VAL').setCheck(['Number','Boolean']).appendField('to');
+    this.appendValueInput('VAL').setCheck(['Number','Boolean']).appendField(Blockly.Msg.BLUETOOTH_BLE_TO);
     bleStatement(this, "Set Espruino's BLE characteristic to the given value");
   }
 };
@@ -348,7 +348,7 @@ Blockly.Blocks.ble_onwritten = {
   category: 'BLE',
   init: function() {
     this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] When');
-    this.appendStatementInput('DO').appendField('changed, do');
+    this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_CHANGED_DO);
     bleStatement(this, "Called when a BLE characteristic is written on Espruino");
   }
 };

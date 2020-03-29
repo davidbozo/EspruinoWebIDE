@@ -485,6 +485,7 @@ if (window.location.href.indexOf("lang=en")>=0 ||
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_SPEED_TOOLTIP = 'Changes the speed of the motor (values from 0.0 to 1.0)';
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION = 'Motor Direction';
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION_TOOLTIP =  'Changes the direction of the motor(true/false)';
+      /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_MOTOR_DIRECTION = "Motor Direction"
 
       //Bluetooth
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED = "[BLE] When Connected"
@@ -497,7 +498,118 @@ if (window.location.href.indexOf("lang=en")>=0 ||
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TOOLTIP = "Sends data to the UART on a Bluetooth device - adds a newline"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TO_UART = "to UART on"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN = "then"
-      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING = "[BLE] On Advertising"
-      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING = "[BLE] On Advertising"
-      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_ADVERTISING = "[BLE] On Advertising"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC = "Characteristic"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DO = "do"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_NAMED = "Device Named"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_NAME = "NAME"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_STARTING_WITH = "Device Starting with"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_ADDRESS = "Device Address"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON = "on"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_TO = "to"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_FROM = "from"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHANGED_DO = "changed, do"
+
+
+      //bangle
+
+      /** @export */ Blockly.Msg.BANGLE_BUZZ = "Buzz for "
+      /** @export */ Blockly.Msg.BANGLE_BEEP = "Beep for "
+      /** @export */ Blockly.Msg.BANGLE_TURN_ON = "Turn on "
+      /** @export */ Blockly.Msg.BANGLE_DEVICE = "DEVICE"
+      /** @export */ Blockly.Msg.BANGLE_TURN_OFF = "Turn off "
+      /** @export */ Blockly.Msg.BANGLE_ON = "On "
+      /** @export */ Blockly.Msg.BANGLE_DO = "DO "
+      /** @export */ Blockly.Msg.BANGLE_DATA = "DATA"
+      /** @export */ Blockly.Msg.BANGLE_EVENT = 'EVENT'
+      /** @export */ Blockly.Msg.BANGLE_MSAT = "ms at"
+
+
+
+      //espruino
+
+      /** @export */ Blockly.Msg.EPRUINO_EDGE = "edge"
+
+
+
+
+      ///gfx
+
+      /** @export */ Blockly.Msg.GFX_CLEAR_SCREEN = "Clears screen"
+      /** @export */ Blockly.Msg.GFX_UPDATE_SCREEN = "Update Screen"
+      /** @export */ Blockly.Msg.GFX_COLOR = "Color"
+      /** @export */ Blockly.Msg.GFX_BACKGROUND_COLOR = "Background Color"
+      /** @export */ Blockly.Msg.GFX_SET_FONT = "Set font"
+      /** @export */ Blockly.Msg.GFX_SIZE = "Size"
+      /** @export */ Blockly.Msg.GFX_ALIGNED = "Aligned"
+      /** @export */ Blockly.Msg.GFX_DRAW_TEXT = "Draw text"
+      /** @export */ Blockly.Msg.GFX_AT_X = "at X"
+      /** @export */ Blockly.Msg.GFX_Y = "Y"
+      /** @export */ Blockly.Msg.GFX_MOVE_TO_X = "Move to X"
+      /** @export */ Blockly.Msg.GFX_LINE_TO_X = "Line to X"
+      /** @export */ Blockly.Msg.GFX_DRAW = "Draw "
+      /** @export */ Blockly.Msg.GFX_FROM_X = "from X"
+      /** @export */ Blockly.Msg.GFX_TO_X = "to X"
+      /** @export */ Blockly.Msg.GFX_IMAGE = "image: "
+
+
+      //menu
+
+      /** @export */ Blockly.Msg.MENU_SHOW = "Show"
+      /** @export */ Blockly.Msg.MENU_WITH_TITLE = "with title"
+      /** @export */ Blockly.Msg.MENU_WHEN_OKE = "when oke"
+      /** @export */ Blockly.Msg.MENU_ASK = "Ask"
+      /** @export */ Blockly.Msg.MENU_IF_YES = "if yes"
+      /** @export */ Blockly.Msg.MENU_IF_NO = "if no"
+
+
+
+      //nordic_thingy
+
+      /** @export */ Blockly.Msg.NORDIC_THINGY_PLAY_SOUND = "Play Sound"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_AT = "at"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_SAMPLES_SEC = 'samples/sec'
+      /** @export */ Blockly.Msg.NORDIC_THINGY_WHEN_FINISHED = "when finished"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_RECORD_SOUND_FOR = "Record Sound for"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_MILLISECONDS = "milliseconds"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_FOR_ONE = "For one"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_DO = "do"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_FOR_EVERY = "For every"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_READING = "reading"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_SENSOR_READING = "Sensor Reading"
+
+
+
+      //robot
+
+      /** @export */ Blockly.Msg.ROBOT_SET = "Set"
+      /** @export */ Blockly.Msg.ROBOT_SERVO_SPEED = "Servo Speed"
+      /** @export */ Blockly.Msg.ROBOT_LED = "LED"
+      /** @export */ Blockly.Msg.ROBOT_LDR = "LDR"
+
+
+
+      //smartibot
+
+      /** @export */ Blockly.Msg.SMARTIBOT_MOTOR = "Motor"
+      /** @export */ Blockly.Msg.SMARTIBOT_SPEED = "Speed"
+      /** @export */ Blockly.Msg.SMARTIBOT_SERVO = "Servo"
+      /** @export */ Blockly.Msg.SMARTIBOT_POSITION = "Position"
+      /** @export */ Blockly.Msg.SMARTIBOT_EYES_LEFT = "EYES Left - R:"
+      /** @export */ Blockly.Msg.SMARTIBOT_G = "G:"
+      /** @export */ Blockly.Msg.SMARTIBOT_B = "B:"
+      /** @export */ Blockly.Msg.SMARTIBOT_RIGHT = 'Right - R:'
+      /** @export */ Blockly.Msg.SMARTIBOT_EYES = "EYES"
+      /** @export */ Blockly.Msg.SMARTIBOT_BRIGHTNESS = "Brightness"
+
+
+
+
+
+
+
+
+
+
+
+       
 }

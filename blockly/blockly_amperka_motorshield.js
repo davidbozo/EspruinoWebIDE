@@ -64,7 +64,7 @@ Blockly.Blocks.amperka_motorshield_motor_dir = {
           .setCheck(['Boolean'])
           .appendField(Blockly.Msg.AMPERKA_MOTORSHIELD_SET)
           .appendField(dropdown, 'PIN')
-          .appendField('Motor Direction')
+          .appendField(Blockly.Msg.AMPERKA_MOTORSHIELD_MOTOR_DIRECTION)
           .appendField(new Blockly.FieldImage("media/direction.png",16,16, "<->"));
     amperka_motorshieldStatement(this,Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION_TOOLTIP );
   }

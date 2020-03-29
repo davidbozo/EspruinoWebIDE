@@ -70,7 +70,7 @@ Blockly.Blocks.bangle_buzz = {
   init: function() {
     this.appendValueInput('LEN')
         .setCheck(['Number'])
-        .appendField('Buzz for ');
+        .appendField(Blockly.Msg.BANGLE_BUZZ);
     this.appendDummyInput()
         .appendField('ms')
     bangleStatement(this, 'Make Bangle.js buzz');
@@ -86,9 +86,9 @@ Blockly.Blocks.bangle_beep = {
   init: function() {
     this.appendValueInput('LEN')
         .setCheck(['Number'])
-        .appendField('Beep for ');
+        .appendField(Blockly.Msg.BANGLE_BEEP);
     this.appendDummyInput()
-        .appendField('ms at')
+        .appendField(Blockly.Msg.BANGLE_MSAT)
         this.appendValueInput('FREQ')
             .setCheck(['Number'])
             .appendField('Hz');
@@ -104,7 +104,7 @@ Blockly.JavaScript.bangle_beep = function() {
 Blockly.Blocks.bangle_turnon = {
   category: 'Bangle.js',
   init: function() {
-    this.appendDummyInput().appendField('Turn on ').appendField(new Blockly.FieldDropdown(BANGLE_ONOFF), 'DEVICE');
+    this.appendDummyInput().appendField(Blockly.Msg.BANGLE_TURN_ON).appendField(new Blockly.FieldDropdown(BANGLE_ONOFF), Blockly.Msg.BANGLE_DEVICE);
     bangleStatement(this, 'Turn a peripheral on');
   }
 };
@@ -116,7 +116,7 @@ Blockly.JavaScript.bangle_turnon = function() {
 Blockly.Blocks.bangle_turnoff = {
   category: 'Bangle.js',
   init: function() {
-    this.appendDummyInput().appendField('Turn off ').appendField(new Blockly.FieldDropdown(BANGLE_ONOFF), 'DEVICE');
+    this.appendDummyInput().appendField(Blockly.Msg.BANGLE_TURN_OFF).appendField(new Blockly.FieldDropdown(BANGLE_ONOFF), Blockly.Msg.BANGLE_DEVICE);
     bangleStatement(this, 'Turn a peripheral off');
   }
 };
@@ -128,9 +128,9 @@ Blockly.JavaScript.bangle_turnoff = function() {
 Blockly.Blocks.bangle_on = {
   category: 'Bangle.js',
   init: function() {
-    this.appendDummyInput().appendField('On ').appendField(new Blockly.FieldDropdown(BANGLE_EVENTS), 'DEVICE');
+    this.appendDummyInput().appendField(Blockly.Msg.BANGLE_ON).appendField(new Blockly.FieldDropdown(BANGLE_EVENTS), Blockly.Msg.BANGLE_DEVICE);
     this.appendStatementInput('DO')
-         .appendField('do');
+         .appendField(Blockly.Msg.BANGLE_DO);
     bangleStatement(this, 'Called when ');
   }
 };
@@ -143,7 +143,7 @@ Blockly.JavaScript.bangle_on = function() {
 Blockly.Blocks.bangle_result_bool = {
   category: 'Bangle.js',
   init: function() {
-    this.appendDummyInput().appendField('data').appendField(new Blockly.FieldDropdown(BANGLE_DATA_BOOL), 'EVENT');
+    this.appendDummyInput().appendField(Blockly.Msg.BANGLE_DATA).appendField(new Blockly.FieldDropdown(BANGLE_DATA_BOOL), Blockly.Msg.BANGLE_EVENT);
     bangleInput(this, 'Boolean data from a Bangle event');
     this.setOutput(true, 'Boolean');
     this.setColour(Blockly.Msg.LOGIC_HUE);
@@ -157,7 +157,7 @@ Blockly.JavaScript.bangle_result_bool = function() {
 Blockly.Blocks.bangle_result_number = {
   category: 'Bangle.js',
   init: function() {
-    this.appendDummyInput().appendField('data').appendField(new Blockly.FieldDropdown(BANGLE_DATA_NUMBER), 'EVENT');
+    this.appendDummyInput().appendField(Blockly.Msg.BANGLE_DATA).appendField(new Blockly.FieldDropdown(BANGLE_DATA_NUMBER), Blockly.Msg.BANGLE_EVENT);
     bangleInput(this, 'Numeric data from a Bangle event');
     this.setOutput(true, 'Number');
     this.setColour(Blockly.Msg.MATH_HUE);

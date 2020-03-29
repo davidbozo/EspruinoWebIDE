@@ -494,7 +494,119 @@ if (window.location.href.indexOf("lang=hu")>=0 ||
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_SPEED_TOOLTIP = 'Megváltoztatja a motor forgási sebességét (0.0 és 1.0 közötti lehet az érték)';
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION = 'Motor irány';
       /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_DIRECTION_TOOLTIP =  'Megváltoztatja a motor forgási irányát (Igaz/Hamis)'; //487-es sor
+      /** @export */ Blockly.Msg.AMPERKA_MOTORSHIELD_MOTOR_DIRECTION = "Motor iránya"
 
       //Bluetooth
-      Blockly.Msg.BLUETOOTH_WHEN_CONNECTED = "Amikor kapcsolódik"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED = "[BLE] Csatlakozáskor"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED_TOOLTIP = "Futtatés BLE eszköz csatlakozása esetén"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_DISCONNECTED = "[BLE] Szétkapcsoláskor"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_WHEN_CONNECTED_TOOLTIP = "Futtatés BLE eszköz lecsatlakozása esetén"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE = "[BLE] Hirdetés"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_TOOLTIP = "Az Espruino gyártó adatait tartalmazó hirdetés észlelésekor"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND = "[BLE] Küldés"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TOOLTIP = "Adatokat küldése az UART-ra egy Bluetooth-eszközön - új sort ad hozzá"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TO_UART = "UART bekapcsolva"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN = "akkor"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC = "Jellegzetesség"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DO = "csináld"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_NAMED = "Eszköz elnevezve"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_NAME = "NÉV"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_STARTING_WITH = "Eszköz ezzel kezd"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_ADDRESS = "Eszköz címe"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON = "be"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_TO = "-hoz"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_FROM = "-tól"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHANGED_DO = "változtatás, csináld"
+
+      //bangle
+
+      /** @export */ Blockly.Msg.BANGLE_BUZZ = "Zúgjon "
+      /** @export */ Blockly.Msg.BANGLE_BEEP = "Sípoljon "
+      /** @export */ Blockly.Msg.BANGLE_TURN_ON = "Bekapcsol "
+      /** @export */ Blockly.Msg.BANGLE_DEVICE = "Eszköz"
+      /** @export */ Blockly.Msg.BANGLE_TURN_OFF = "Kikapcsol "
+      /** @export */ Blockly.Msg.BANGLE_ON = "Ezen: "
+      /** @export */ Blockly.Msg.BANGLE_DO = "Csinálja "
+      /** @export */ Blockly.Msg.BANGLE_DATA = "Adat"
+      /** @export */ Blockly.Msg.BANGLE_EVENT = 'Esemény'
+      /** @export */ Blockly.Msg.BANGLE_MSAT = "ms"
+
+
+      //espruino
+
+      /** @export */ Blockly.Msg.EPRUINO_EDGE = "él"
+
+
+      ///gfx
+
+      /** @export */ Blockly.Msg.GFX_CLEAR_SCREEN = "Képernyő törlés"
+      /** @export */ Blockly.Msg.GFX_UPDATE_SCREEN = "Képernyő frissítés"
+      /** @export */ Blockly.Msg.GFX_COLOR = "Szín"
+      /** @export */ Blockly.Msg.GFX_BACKGROUND_COLOR = "Háttérszín"
+      /** @export */ Blockly.Msg.GFX_SET_FONT = "Betűtípus beállítása"
+      /** @export */ Blockly.Msg.GFX_SIZE = "Méret"
+      /** @export */ Blockly.Msg.GFX_ALIGNED = "Igazítás"
+      /** @export */ Blockly.Msg.GFX_DRAW_TEXT = "Szöveg kirajzolása"
+      /** @export */ Blockly.Msg.GFX_AT_X = "X -nél"
+      /** @export */ Blockly.Msg.GFX_Y = "Y"
+      /** @export */ Blockly.Msg.GFX_MOVE_TO_X = "Mozhatás X-hez"
+      /** @export */ Blockly.Msg.GFX_LINE_TO_X = "Igazítás X-hez"
+      /** @export */ Blockly.Msg.GFX_DRAW = "Kirajzolás: "
+      /** @export */ Blockly.Msg.GFX_FROM_X = "X-től "
+      /** @export */ Blockly.Msg.GFX_TO_X = "X-hez "
+      /** @export */ Blockly.Msg.GFX_IMAGE = "kép: "
+
+
+       //menu
+
+      /** @export */ Blockly.Msg.MENU_SHOW = "Mutat"
+      /** @export */ Blockly.Msg.MENU_WITH_TITLE = "címmel"
+      /** @export */ Blockly.Msg.MENU_WHEN_OKE = "ha oké"
+      /** @export */ Blockly.Msg.MENU_ASK = "Kérdez"
+      /** @export */ Blockly.Msg.MENU_IF_YES = "ha igen"
+      /** @export */ Blockly.Msg.MENU_IF_NO = "ha nem"
+
+
+      //nordic_thingy
+
+      /** @export */ Blockly.Msg.NORDIC_THINGY_PLAY_SOUND = "Hang lejátszása"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_AT = ""
+      /** @export */ Blockly.Msg.NORDIC_THINGY_SAMPLES_SEC = 'minta/mp'
+      /** @export */ Blockly.Msg.NORDIC_THINGY_WHEN_FINISHED = "ha kész"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_RECORD_SOUND_FOR = "Hanfelvétel"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_MILLISECONDS = "milliszekundum"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_FOR_ONE = "Egyre"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_DO = "csinálja"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_FOR_EVERY = "Mindegyikre"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_READING = "olvasás"
+      /** @export */ Blockly.Msg.NORDIC_THINGY_SENSOR_READING = "Szenzor olvasás"
+
+
+
+      //robot
+
+      /** @export */ Blockly.Msg.ROBOT_SET = "Beállít: "
+      /** @export */ Blockly.Msg.ROBOT_SERVO_SPEED = "Servo sebessége"
+      /** @export */ Blockly.Msg.ROBOT_LED = "LED"
+      /** @export */ Blockly.Msg.ROBOT_LDR = "LDR"
+
+
+      //smartibot
+
+      /** @export */ Blockly.Msg.SMARTIBOT_MOTOR = "Motor"
+      /** @export */ Blockly.Msg.SMARTIBOT_SPEED = "Sebesség"
+      /** @export */ Blockly.Msg.SMARTIBOT_SERVO = "Servo"
+      /** @export */ Blockly.Msg.SMARTIBOT_POSITION = "Pozíció"
+      /** @export */ Blockly.Msg.SMARTIBOT_EYES_LEFT = "SZEMEK Bal - P:"
+      /** @export */ Blockly.Msg.SMARTIBOT_G = "Z:"
+      /** @export */ Blockly.Msg.SMARTIBOT_B = "K:"
+      /** @export */ Blockly.Msg.SMARTIBOT_RIGHT = 'Jobb - P:'
+      /** @export */ Blockly.Msg.SMARTIBOT_EYES = "SZEMEK"
+      /** @export */ Blockly.Msg.SMARTIBOT_BRIGHTNESS = "Féynerő"
+
+
+
+
+
 }
+

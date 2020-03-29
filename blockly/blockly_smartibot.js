@@ -41,9 +41,9 @@ const SMARTIBOT_COLORS = [
 Blockly.Blocks.smartibot_motor = {
   category: 'Smartibot',
   init: function() {
-    this.appendDummyInput().appendField("Motor")
+    this.appendDummyInput().appendField(Blockly.Msg.SMARTIBOT_MOTOR)
          .appendField(new Blockly.FieldDropdown(SMARTIBOT_MOTORS), 'MOTOR')
-         .appendField("speed");
+         .appendField(Blockly.Msg.SMARTIBOT_SPEED);
     this.appendValueInput('VAL').setCheck(['Number','Boolean']);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
@@ -56,9 +56,9 @@ Blockly.Blocks.smartibot_motor = {
 Blockly.Blocks.smartibot_servo = {
   category: 'Smartibot',
   init: function() {
-    this.appendDummyInput().appendField("Servo")
+    this.appendDummyInput().appendField(Blockly.Msg.SMARTIBOT_SERVO)
          .appendField(new Blockly.FieldDropdown(SMARTIBOT_SERVOS), 'SERVO')
-         .appendField("position");
+         .appendField(Blockly.Msg.SMARTIBOT_POSITION);
     this.appendValueInput('VAL').setCheck(['Number','Boolean']);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
@@ -73,22 +73,22 @@ Blockly.Blocks.smartibot_LED = {
   init: function() {
       this.appendValueInput('LR')
           .setCheck(['Number'])
-          .appendField("EYES Left - R:");
+          .appendField(Blockly.Msg.SMARTIBOT_EYES_LEFT);
       this.appendValueInput('LG')
           .setCheck(['Number'])
-          .appendField("G:");
+          .appendField(Blockly.Msg.SMARTIBOT_G);
       this.appendValueInput('LB')
           .setCheck(['Number'])
-          .appendField("B:");
+          .appendField(Blockly.Msg.SMARTIBOT_B);
       this.appendValueInput('RR')
           .setCheck(['Number'])
-          .appendField('Right - R:');
+          .appendField(Blockly.Msg.SMARTIBOT_RIGHT);
       this.appendValueInput('RG')
           .setCheck(['Number'])
-          .appendField("G:");
+          .appendField(Blockly.Msg.SMARTIBOT_G);
       this.appendValueInput('RB')
           .setCheck(['Number'])
-          .appendField("B:");
+          .appendField(Blockly.Msg.SMARTIBOT_B);
 
     this.setPreviousStatement(true);
     this.setNextStatement(true);
@@ -101,9 +101,9 @@ Blockly.Blocks.smartibot_LED = {
 Blockly.Blocks.smartibot_LEDcol = {
   category: 'Smartibot',
   init: function() {
-    this.appendDummyInput().appendField("EYES")
+    this.appendDummyInput().appendField(Blockly.Msg.SMARTIBOT_EYES)
          .appendField(new Blockly.FieldDropdown(SMARTIBOT_COLORS), 'COL')
-         .appendField("Brightness:");
+         .appendField(Blockly.Msg.SMARTIBOT_BRIGHTNESS);
     this.appendValueInput('BRIGHT').setCheck(['Number']);
 
     this.setPreviousStatement(true);

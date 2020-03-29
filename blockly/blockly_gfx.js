@@ -31,7 +31,7 @@ Blockly.Blocks.gfx_clear = {
   category: 'Graphics',
   init: function() {
     this.appendDummyInput()
-        .appendField('Clear Screen');
+        .appendField(Blockly.Msg.GFX_CLEAR_SCREEN);
     gfxStatement(this, 'Clear the screen');
   }
 };
@@ -43,7 +43,7 @@ Blockly.Blocks.gfx_flip = {
   category: 'Graphics',
   init: function() {
     this.appendDummyInput()
-        .appendField('Update Screen');
+        .appendField(Blockly.Msg.GFX_UPDATE_SCREEN);
     gfxStatement(this, 'Update (flip) the screen to show what was just drawn (not needed on Bangle.js)');
   }
 };
@@ -55,7 +55,7 @@ Blockly.Blocks.gfx_setColor = {
   category: 'Graphics',
   init: function() {
     this.appendDummyInput()
-        .appendField('Color')
+        .appendField(Blockly.Msg.GFX_COLOR)
         .appendField(new Blockly.FieldColour('#ff0000'), 'COL');
     gfxStatement(this, 'Set the color');
   }
@@ -72,7 +72,7 @@ Blockly.Blocks.gfx_setBgColor = {
   category: 'Graphics',
   init: function() {
     this.appendDummyInput()
-        .appendField('Background Color')
+        .appendField(Blockly.Msg.GFX_BACKGROUND_COLOR)
         .appendField(new Blockly.FieldColour('#ff0000'), 'COL');
     gfxStatement(this, 'Set the background color');
   }
@@ -88,15 +88,15 @@ Blockly.JavaScript.gfx_setBgColor = function() {
 Blockly.Blocks.gfx_setFont = {
   category: 'Graphics',
   init: function() {
-    this.appendDummyInput().appendField('Set Font ').appendField(new Blockly.FieldDropdown([
+    this.appendDummyInput().appendField(Blockly.Msg.GFX_SET_FONT).appendField(new Blockly.FieldDropdown([
           ["6x8","6x8"],
           ["4x6","4x6"],
           ["Vector","Vector"]
         ]), 'STYLE');
     this.appendValueInput('SIZE')
         .setCheck(['Number'])
-        .appendField('size');
-    this.appendDummyInput().appendField('Aligned').appendField(new Blockly.FieldDropdown([
+        .appendField(Blockly.Msg.GFX_SIZE);
+    this.appendDummyInput().appendField(Blockly.Msg.GFX_ALIGNED).appendField(new Blockly.FieldDropdown([
           ["Left","-1"],
           ["Center","0"],
           ["Right","1"],
@@ -121,13 +121,13 @@ Blockly.Blocks.gfx_drawString = {
   init: function() {
     this.appendValueInput('TEXT')
         .setCheck(['String','Number','Boolean'])
-        .appendField('Draw Text')
+        .appendField(Blockly.Msg.GFX_DRAW_TEXT)
     this.appendValueInput('X')
         .setCheck(['Number'])
-        .appendField('at X');
+        .appendField(Blockly.Msg.GFX_AT_X);
     this.appendValueInput('Y')
         .setCheck(['Number'])
-        .appendField('Y');
+        .appendField(Blockly.Msg.GFX_Y);
     gfxStatement(this, 'Draw some text');
   }
 };
@@ -143,10 +143,10 @@ Blockly.Blocks.gfx_moveTo = {
   init: function() {
     this.appendValueInput('X')
         .setCheck(['Number'])
-        .appendField('Move to X');
+        .appendField(Blockly.Msg.GFX_MOVE_TO_X);
     this.appendValueInput('Y')
         .setCheck(['Number'])
-        .appendField('Y');
+        .appendField(Blockly.Msg.GFX_Y);
 
     gfxStatement(this, 'Move the cursor to a location');
   }
@@ -161,10 +161,10 @@ Blockly.Blocks.gfx_lineTo = {
   init: function() {
     this.appendValueInput('X')
         .setCheck(['Number'])
-        .appendField('Line to X');
+        .appendField(Blockly.Msg.GFX_LINE_TO_X);
     this.appendValueInput('Y')
         .setCheck(['Number'])
-        .appendField('Y');
+        .appendField(Blockly.Msg.GFX_Y);
 
     gfxStatement(this, 'Draw a line to location');
   }
@@ -178,7 +178,7 @@ Blockly.JavaScript.gfx_lineTo = function() {
 Blockly.Blocks.gfx_draw = {
   category: 'Graphics',
   init: function() {
-    this.appendDummyInput().appendField('Draw ').appendField(new Blockly.FieldDropdown([
+    this.appendDummyInput().appendField(Blockly.Msg.GFX_DRAW).appendField(new Blockly.FieldDropdown([
           ["Rectangle","drawRect"],
           ["Filled Rectangle","fillRect"],
           ["Cleared Rectangle","clearRect"],
@@ -187,16 +187,16 @@ Blockly.Blocks.gfx_draw = {
         ]), 'STYLE');
     this.appendValueInput('X')
         .setCheck(['Number'])
-        .appendField('from X');
+        .appendField(Blockly.Msg.GFX_FROM_X);
     this.appendValueInput('Y')
         .setCheck(['Number'])
-        .appendField('Y');
+        .appendField(Blockly.Msg.GFX_Y);
     this.appendValueInput('X2')
         .setCheck(['Number'])
-        .appendField('to X');
+        .appendField(Blockly.Msg.GFX_TO_X);
     this.appendValueInput('Y2')
         .setCheck(['Number'])
-        .appendField('Y');
+        .appendField(Blockly.Msg.GFX_Y);
     gfxStatement(this, 'Draw a rectangle');
   }
 };
@@ -221,14 +221,14 @@ Blockly.Blocks.gfx_image = {
     fi.name = "IMAGE";
     fi.EDITABLE = true;
     this.appendDummyInput('IMAGE')
-        .appendField("image:")
+        .appendField(Blockly.Msg.GFX_IMAGE)
         .appendField(fi);
     this.appendValueInput('X')
         .setCheck(['Number'])
-        .appendField('at X');
+        .appendField(Blockly.Msg.GFX_AT_X);
     this.appendValueInput('Y')
         .setCheck(['Number'])
-        .appendField('Y');
+        .appendField(Blockly.Msg.GFX_Y);
     gfxStatement(this, 'Draw an image');
 
     function onChooseImage(field) {

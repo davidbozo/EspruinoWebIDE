@@ -33,10 +33,10 @@ Blockly.Blocks.menu_message = {
   init: function() {
     this.appendValueInput('TEXT')
         .setCheck(['String','Number','Boolean'])
-        .appendField('Show')
+        .appendField(Blockly.Msg.MENU_SHOW)
     this.appendValueInput('TITLE')
         .setCheck(['String','Number','Boolean'])
-        .appendField('with title');
+        .appendField(Blockly.Msg.MENU_WITH_TITLE);
     menuStatement(this, 'Show a message on the screen');
   }
 };
@@ -51,12 +51,12 @@ Blockly.Blocks.menu_alert = {
   init: function() {
     this.appendValueInput('TEXT')
         .setCheck(['String','Number','Boolean'])
-        .appendField('Show');
+        .appendField(Blockly.Msg.MENU_SHOW);
     this.appendValueInput('TITLE')
         .setCheck(['String','Number','Boolean'])
-        .appendField('with title');
+        .appendField(Blockly.Msg.MENU_WITH_TITLE);
     this.appendStatementInput('DO')
-         .appendField('when ok');
+         .appendField(Blockly.Msg.MENU_WHEN_OKE);
     menuStatement(this, 'Show a message on the screen and wait');
   }
 };
@@ -72,14 +72,14 @@ Blockly.Blocks.menu_prompt = {
   init: function() {
     this.appendValueInput('TEXT')
         .setCheck(['String','Number','Boolean'])
-        .appendField('Ask');
+        .appendField(Blockly.Msg.MENU_ASK);
     this.appendValueInput('TITLE')
         .setCheck(['String','Number','Boolean'])
-        .appendField('with title');
+        .appendField(Blockly.Msg.MENU_WITH_TITLE);
     this.appendStatementInput('YES')
-         .appendField('if yes');
+         .appendField(Blockly.Msg.MENU_IF_YES);
     this.appendStatementInput('NO')
-         .appendField('if no');
+         .appendField(Blockly.Msg.MENU_IF_NO);
     menuStatement(this, 'Show a message on the screen and wait');
   }
 };

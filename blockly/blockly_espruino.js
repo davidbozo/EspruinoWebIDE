@@ -223,7 +223,7 @@ Blockly.Blocks.espruino_watch = {
           .setCheck('Pin')
           .appendField(Blockly.Msg.ESPRUINO_WATCH);
       this.appendDummyInput()
-           .appendField(new Blockly.FieldDropdown(this.EDGES), 'EDGE').appendField('edge');
+           .appendField(new Blockly.FieldDropdown(this.EDGES), 'EDGE').appendField(Blockly.Msg.EPRUINO_EDGE);
       this.appendStatementInput('DO')
            .appendField(Blockly.Msg.CONTROLS_REPEAT_INPUT_DO);
 
@@ -235,7 +235,7 @@ Blockly.Blocks.espruino_watch = {
   },
 EDGES: [
 ["both", 'both'],
-["rising", 'rising'],
+["emelkedő", 'rising'],
 ["falling", 'falling']]
 };
 

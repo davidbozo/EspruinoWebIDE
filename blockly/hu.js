@@ -507,16 +507,29 @@ if (window.location.href.indexOf("lang=hu")>=0 ||
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TOOLTIP = "Adatokat küldése az UART-ra egy Bluetooth-eszközön - új sort ad hozzá"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_TO_UART = "UART bekapcsolva"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN = "akkor"
-      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC = "Jellegzetesség"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC = "Jellemző"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DO = "csináld"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_NAMED = "Eszköz elnevezve"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_NAME = "NÉV"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADDR = "CÍM"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADDR = "SERV"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHAR = "CHAR"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_SET = "BEÁLLÍT"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_SET = "[BLE] Beállítás"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_GET = "[BLE] Lekérés"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_WHEN = "[BLE] Amikor"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_VALUE = "[BLE] Érték"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_STARTING_WITH = "Eszköz ezzel kezd"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_ADDRESS = "Eszköz címe"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON = "be"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_TO = "-hoz"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_FROM = "-tól"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHANGED_DO = "változtatás, csináld"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_SET_VALUE = "Beállít egy értéket egy BLE eszközön"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_ESPRUINO_DATA = "Hirdetés Espruino gyári adatain"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_GET_VALUE = "Lekéri az értéket egy BLE eszközről"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_SET_BLE_CHARASTERISTICS = "Espruino jellemzőjének beállítása az adott értékre"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CALL_BLE_CHARASTERISTICS = "Akkor hívódik meg, ha egy BLE jellemzőt írnak az Espruino-n"
 
       //bangle
 
@@ -589,6 +602,8 @@ if (window.location.href.indexOf("lang=hu")>=0 ||
       /** @export */ Blockly.Msg.ROBOT_SERVO_SPEED = "Servo sebessége"
       /** @export */ Blockly.Msg.ROBOT_LED = "LED"
       /** @export */ Blockly.Msg.ROBOT_LDR = "LDR"
+      /** @export */ Blockly.Msg.ROBOT_CHANGE_MOTOR_SPEED = "Megváltoztatja a motor sebességét"
+      /** @export */ Blockly.Msg.ROBOT_CHANGE_TURN_LED_ON_OFF = "Fel- vagy lekapcsolja a LED-et"
 
 
       //smartibot

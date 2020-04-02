@@ -40,7 +40,7 @@ Blockly.Blocks.robot_motor = {
           .appendField(Blockly.Msg.ROBOT_SET)
           .appendField(dropdown, 'PIN')
           .appendField(Blockly.Msg.ROBOT_SERVO_SPEED);
-    robotStatement(this, 'Changes the speed of the motor');
+    robotStatement(this, Blockly.Msg.ROBOT_CHANGE_MOTOR_SPEED);
   }
 };
 Blockly.JavaScript.robot_motor = function() {
@@ -65,7 +65,7 @@ Blockly.Blocks.robot_led = {
          .appendField(Blockly.Msg.ROBOT_SET)
          .appendField(dropdown, 'PIN')
          .appendField(Blockly.Msg.ROBOT_LED);
-    robotStatement(this, 'Turns the LED Light on or off');
+    robotStatement(this, Blockly.Msg.ROBOT_CHANGE_TURN_LED_ON_OFF);
   }
 };
 Blockly.JavaScript.robot_led = function() {

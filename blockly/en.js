@@ -502,12 +502,26 @@ if (window.location.href.indexOf("lang=en")>=0 ||
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DO = "do"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_NAMED = "Device Named"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_NAME = "NAME"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADDR = "ADDR"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADDR = "SERV"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHAR = "CHAR"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_SET = "SET"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_SET = "[BLE] Set"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_GET = "[BLE] Get"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_WHEN = "[BLE] When"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_BLE_VALUE = "[BLE] Value"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_STARTING_WITH = "Device Starting with"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_DEVICE_ADDRESS = "Device Address"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_ON = "on"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_TO = "to"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_FROM = "from"
       /** @export */ Blockly.Msg.BLUETOOTH_BLE_CHANGED_DO = "changed, do"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_SET_VALUE = "Sets a value on a BLE device"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_ESPRUINO_DATA = "Advertise on Espruino's manufacturer data"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_GET_VALUE = "Gets a value from a BLE device"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_SET_BLE_CHARASTERISTICS = "Set Espruino's BLE characteristic to the given value"
+      /** @export */ Blockly.Msg.BLUETOOTH_BLE_CALL_BLE_CHARASTERISTICS = "Called when a BLE characteristic is written on Espruino"
+
 
 
       //bangle
@@ -585,6 +599,8 @@ if (window.location.href.indexOf("lang=en")>=0 ||
       /** @export */ Blockly.Msg.ROBOT_SERVO_SPEED = "Servo Speed"
       /** @export */ Blockly.Msg.ROBOT_LED = "LED"
       /** @export */ Blockly.Msg.ROBOT_LDR = "LDR"
+      /** @export */ Blockly.Msg.ROBOT_CHANGE_MOTOR_SPEED = "Changes the speed of the motor"
+      /** @export */ Blockly.Msg.ROBOT_CHANGE_TURN_LED_ON_OFF = "Turns the LED Light on or off"
 
 
 

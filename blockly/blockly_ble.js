@@ -97,7 +97,7 @@ Blockly.Blocks.ble_advertise = {
   init: function() {
     this.appendValueInput('VAL')
       .setCheck(['String','Number','Boolean']).appendField('[BLE] '+ Blockly.Msg.BLUETOOTH_BLE_ADVERTISE);;
-    bleStatement(this, "Advertise on Espruino's manufacturer data");
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_ADVERTISE_ESPRUINO_DATA);
   }
 };
 Blockly.JavaScript.ble_advertise = function() {
@@ -169,7 +169,7 @@ Blockly.Blocks.ble_dev_name = {
   init: function() {
     this.appendDummyInput().
       appendField(Blockly.Msg.BLUETOOTH_BLE_DEVICE_NAMED).
-      appendField(new Blockly.FieldTextInput("Puck.js ABCD"), 'NAME');
+      appendField(new Blockly.FieldTextInput("Puck.js ABCD"), Blockly.Msg.BLUETOOTH_BLE_NAME);
     bleInput(this, '', 'BLEDevice');
   }
 };
@@ -187,7 +187,7 @@ Blockly.Blocks.ble_dev_prefix = {
   init: function() {
     this.appendDummyInput().
       appendField(Blockly.Msg.BLUETOOTH_BLE_DEVICE_STARTING_WITH).
-      appendField(new Blockly.FieldTextInput("Puck.js"), 'NAME');
+      appendField(new Blockly.FieldTextInput("Puck.js"), Blockly.Msg.BLUETOOTH_BLE_NAME);
     bleInput(this, '', 'BLEDevice');
   }
 };
@@ -205,7 +205,7 @@ Blockly.Blocks.ble_dev_address = {
   init: function() {
     this.appendDummyInput().
       appendField(Blockly.Msg.BLUETOOTH_BLE_DEVICE_ADDRESS).
-      appendField(new Blockly.FieldTextInput("Puck.js"), 'ADDR');
+      appendField(new Blockly.FieldTextInput("Puck.js"), Blockly.Msg.BLUETOOTH_BLE_ADDR);
     bleInput(this, '', 'BLEDevice');
   }
 };
@@ -221,9 +221,9 @@ Blockly.Blocks.ble_characteristic = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC)
-        .appendField(new Blockly.FieldTextInput("0001"), 'SERV')
+        .appendField(new Blockly.FieldTextInput("0001"), Blockly.Msg.BLUETOOTH_BLE_ADDR)
         .appendField(':')
-        .appendField(new Blockly.FieldTextInput("2A56"), 'CHAR');
+        .appendField(new Blockly.FieldTextInput("2A56"), Blockly.Msg.BLUETOOTH_BLE_CHAR);
     bleInput(this, '', 'BLECharacteristic');
   }
 };
@@ -238,7 +238,7 @@ Blockly.Blocks.ble_characteristic_dropdown = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.BLUETOOTH_BLE_CHARACTERISTIC)
-      .appendField(new Blockly.FieldDropdown(BLE_CHARACTERISTICS), 'CHAR')
+      .appendField(new Blockly.FieldDropdown(BLE_CHARACTERISTICS), Blockly.Msg.BLUETOOTH_BLE_CHAR)
     bleInput(this, '', 'BLECharacteristic');
   }
 };
@@ -250,11 +250,11 @@ Blockly.JavaScript.ble_characteristic_dropdown = function() {
 Blockly.Blocks.ble_setchar = {
   category: 'BLE',
   init: function() {
-      this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] Set');
+      this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField(Blockly.Msg.BLUETOOTH_BLE_BLE_SET);
       this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField(Blockly.Msg.BLUETOOTH_BLE_ON);
       this.appendValueInput('VAL').setCheck(['Number','Boolean','String']).appendField(Blockly.Msg.BLUETOOTH_BLE_TO);
       this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN);
-    bleStatement(this, 'Sets a value on a BLE device');
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_SET_VALUE);
   }
 };
 Blockly.JavaScript.ble_setchar = function() {
@@ -284,10 +284,10 @@ Blockly.JavaScript.ble_setchar = function() {
 Blockly.Blocks.ble_getchar = {
   category: 'BLE',
   init: function() {
-    this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] Get');
+    this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField(Blockly.Msg.BLUETOOTH_BLE_BLE_GET);
     this.appendValueInput('DEV').setCheck(['BLEDevice']).appendField(Blockly.Msg.BLUETOOTH_BLE_FROM);
     this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_ON_SEND_THEN);
-    bleStatement(this, 'Gets a value from a BLE device');
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_GET_VALUE);
   }
 };
 Blockly.JavaScript.ble_getchar = function() {
@@ -317,9 +317,9 @@ Blockly.JavaScript.ble_getchar = function() {
 Blockly.Blocks.ble_write = {
   category: 'BLE',
   init: function() {
-    this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] Set');
+    this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField(Blockly.Msg.BLUETOOTH_BLE_BLE_SET);
     this.appendValueInput('VAL').setCheck(['Number','Boolean']).appendField(Blockly.Msg.BLUETOOTH_BLE_TO);
-    bleStatement(this, "Set Espruino's BLE characteristic to the given value");
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_SET_BLE_CHARASTERISTICS);
   }
 };
 Blockly.JavaScript.ble_write = function() {
@@ -347,9 +347,9 @@ Blockly.JavaScript.ble_write = function() {
 Blockly.Blocks.ble_onwritten = {
   category: 'BLE',
   init: function() {
-    this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField('[BLE] When');
+    this.appendValueInput('CHAR').setCheck(['BLECharacteristic']).appendField(Blockly.Msg.BLUETOOTH_BLE_BLE_WHEN);
     this.appendStatementInput('DO').appendField(Blockly.Msg.BLUETOOTH_BLE_CHANGED_DO);
-    bleStatement(this, "Called when a BLE characteristic is written on Espruino");
+    bleStatement(this, Blockly.Msg.BLUETOOTH_BLE_CALL_BLE_CHARASTERISTICS);
   }
 };
 Blockly.JavaScript.ble_onwritten = function() {
@@ -376,7 +376,7 @@ Blockly.JavaScript.ble_onwritten = function() {
 Blockly.Blocks.ble_value = {
   category: 'BLE',
   init: function() {
-    this.appendDummyInput().appendField('[BLE] Value');
+    this.appendDummyInput().appendField(Blockly.Msg.BLUETOOTH_BLE_BLE_VALUE);
     bleInput(this, 'The value from the last BLE operation');
   }
 };
